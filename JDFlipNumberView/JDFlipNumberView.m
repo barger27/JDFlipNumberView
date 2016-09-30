@@ -271,14 +271,14 @@ typedef NS_OPTIONS(NSUInteger, JDFlipAnimationDirection) {
 - (void)animateToNextNumber;
 {
 	[self stopAnimation];
-    self.animationType = JDFlipAnimationTypeTopDown;
+    self.animationType = JDFlipAnimationTypeBottomUp;
 	[self setValue:self.value+1 animatedInCurrentDirection:YES];
 }
 
 - (void)animateToPreviousNumber;
 {
 	[self stopAnimation];
-    self.animationType = JDFlipAnimationTypeBottomUp;
+    self.animationType = JDFlipAnimationTypeTopDown;
     [self setValue:self.value-1 animatedInCurrentDirection:YES];
 }
 
